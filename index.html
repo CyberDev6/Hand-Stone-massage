@@ -4,12 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jessica massage therapy offers professional lymphatic drainage, deep tissue, and relaxation massages. Open daily 8am-10pm. Book via WhatsApp today!">
-    <title>Massage Treatments | Jessica massage therapy</title>
-    
+    <meta name="description"
+        content="Jessica massage therapy offers professional lymphatic drainage, deep tissue, and relaxation massages. Open daily 8am-10pm. Book via WhatsApp today!">
+    <title>Massage Treatments | Hand & Stone Massage</title>
+
     <!-- EmailJS SDK for Direct Form Submissions -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
+
+    <!-- External Google Fonts for Premium Logo Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet">
+
     <style>
         /* --- CORE STYLES --- */
         * {
@@ -26,46 +33,75 @@
             overflow-x: hidden;
         }
 
-        /* --- LOGO STYLING --- */
+        /* --- UPDATED LOGO STYLING --- */
         .logo-container {
-            display: flex;
+            display: inline-flex;
             align-items: center;
             text-decoration: none;
-            gap: 12px;
+            background-color: #ffffff;
+            font-family: 'Cinzel', serif;
+            user-select: none;
         }
 
-        .logo-icon {
-            width: 45px;
-            height: 45px;
-            background: #8e44ad;
-            border-radius: 50%;
+        .logo-text-wrapper {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            font-family: 'Georgia', serif;
-            font-weight: bold;
-            font-size: 24px;
-            border: 2px solid #d4af37;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-            flex-shrink: 0;
+            flex-direction: column;
+            margin-right: 12px;
         }
 
-        .logo-text {
-            font-family: 'Georgia', serif;
+        .logo-brand {
+            color: #0f3d69;
+            font-size: 26px;
+            line-height: 0.9;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: baseline;
+            font-weight: 700;
+        }
+
+        .serif-text {
+            display: inline-block;
+        }
+
+        .font-large {
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .ampersand {
+            font-family: 'Cinzel', serif;
             font-size: 20px;
-            font-weight: bold;
-            color: #222;
-            letter-spacing: 1px;
-            line-height: 1;
+            font-weight: 500;
+            margin: 0 4px;
+            align-self: center;
         }
 
-        .logo-text span {
+        .trademark {
+            font-family: Arial, sans-serif;
+            font-size: 8px;
+            vertical-align: super;
+            margin-left: 1px;
+            font-weight: normal;
+        }
+
+        .logo-tagline {
+            background-color: #0f3d69;
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 8.5px;
+            font-weight: 600;
+            letter-spacing: 2.4px;
+            padding: 3px 0 3px 4px;
+            text-align: center;
+            margin-top: 3px;
+            word-spacing: 1px;
+        }
+
+        .logo-icon-svg {
+            width: 58px;
+            height: 58px;
+            margin-left: 2px;
             display: block;
-            font-size: 10px;
-            text-transform: uppercase;
-            color: #8e44ad;
-            letter-spacing: 3px;
         }
 
         /* --- HEADER & NAV --- */
@@ -73,7 +109,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
+            padding: 10px 5%;
             background: #fff;
             position: sticky;
             top: 0;
@@ -87,7 +123,7 @@
             gap: 15px;
         }
 
-        /* NEW: Nav Links Styling */
+        /* Nav Links Styling */
         .nav-links {
             display: flex;
             list-style: none;
@@ -162,38 +198,44 @@
             font-style: italic;
         }
 
-        /* --- OPTION 2: GALLERY SLIDER STYLES --- */
+        /* --- GALLERY SLIDER STYLES --- */
         .gallery-section {
             max-width: 1200px;
             margin: 40px auto 10px auto;
             padding: 0 20px;
             text-align: center;
         }
+
         .gallery-section h2 {
             margin-bottom: 10px;
         }
+
         .slider-wrapper {
             position: relative;
             max-width: 800px;
             margin: 20px auto;
             overflow: hidden;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
         .image-slider {
             display: flex;
             transition: transform 0.5s ease-in-out;
             width: 100%;
         }
+
         .slide {
             min-width: 100%;
             height: 400px;
         }
+
         .slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
+
         .slider-btn {
             position: absolute;
             top: 50%;
@@ -208,11 +250,18 @@
             transition: background 0.3s;
             z-index: 10;
         }
+
         .slider-btn:hover {
             background: #8e44ad;
         }
-        .prev-btn { left: 15px; }
-        .next-btn { right: 15px; }
+
+        .prev-btn {
+            left: 15px;
+        }
+
+        .next-btn {
+            right: 15px;
+        }
 
         /* --- GRID & CARDS --- */
         .services-container {
@@ -409,15 +458,13 @@
             .nav-links a {
                 font-size: 11px;
             }
-            
+
             .slide {
                 height: 250px;
             }
         }
 
-        /* ==========================================================================
-            NEW APPOINTMENT MODAL FORM STYLING (Professional Overlay Aesthetics)
-           ========================================================================== */
+        /* --- APPOINTMENT MODAL FORM STYLING --- */
         .modal-overlay {
             position: fixed;
             top: 0;
@@ -517,7 +564,6 @@
             border-color: #8e44ad;
         }
 
-        /* Professional Action Options Panel */
         .booking-options-heading {
             font-size: 12px;
             font-weight: bold;
@@ -531,7 +577,7 @@
         .action-buttons-container {
             display: flex;
             gap: 10px;
-            flex-wrap: wrap; /* Ensures buttons fit well on small mobile views */
+            flex-wrap: wrap;
         }
 
         .action-btn {
@@ -568,10 +614,10 @@
         }
 
         .btn-text {
-            background-color: #007AFF; /* Text Message Royal Blue style */
+            background-color: #007AFF;
         }
 
-        /* --- NEW STYLING: ADDITION 1 FOOTER --- */
+        /* --- FOOTER --- */
         footer {
             background-color: #1a1a1a;
             color: #bbb;
@@ -621,21 +667,59 @@
 <body>
 
     <header>
-        <a href="#" class="logo-container">
-            <div class="logo-icon">H&S</div>
-            <div class="logo-text">Hands<span>& Stone Massage</span></div>
+        <!-- Replaced with clean vector layout matching 'image.png' structural aesthetics -->
+        <a href="" class="logo-container">
+            <div class="logo-text-wrapper">
+                <div class="logo-brand">
+                    <span class="serif-text font-large">H</span><span class="serif-text">AND</span>
+                    <span class="ampersand">&amp;</span>
+                    <span class="serif-text font-large">S</span><span class="serif-text">TONE</span><span
+                        class="trademark">&reg;</span>
+                </div>
+                <div class="logo-tagline">
+                    MASSAGE AND FACIAL SPA
+                </div>
+            </div>
+
+            <svg class="logo-icon-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#0f3d69" stroke-width="4"
+                    stroke-dasharray="98 2 45 1 20 2" />
+                <circle cx="50" cy="50" r="41" fill="none" stroke="#0f3d69" stroke-width="1" opacity="0.5" />
+                <g fill="none" stroke="#0f3d69" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M 50 32 L 50 20 M 45 33 L 40 22 M 55 33 L 60 22 M 41 36 L 32 27 M 59 36 L 68 27 M 39 41 L 28 36 M 61 41 L 72 36"
+                        stroke-width="3" />
+                    <circle cx="50" cy="37" r="4.5" fill="#0f3d69" />
+                    <path d="M 50 42 L 50 62" stroke-width="5.5" />
+                    <path d="M 48 46 L 36 46 L 36 56 L 41 56" />
+                    <circle cx="43" cy="53" r="2" fill="#0f3d69" stroke-width="1" />
+                    <path d="M 52 46 L 66 43 L 68 34 L 75 34" />
+                    <circle cx="78" cy="32" r="2.5" fill="#0f3d69" stroke-width="1" />
+                    <path d="M 42 75 L 45 62 L 55 62 L 58 75" />
+                    <path d="M 38 75 L 62 75" stroke-width="3.5" />
+                </g>
+                <g fill="#0f3d69" opacity="0.8">
+                    <circle cx="28" cy="48" r="1.5" />
+                    <circle cx="30" cy="62" r="1" />
+                    <circle cx="68" cy="52" r="1.5" />
+                    <circle cx="72" cy="61" r="1" />
+                    <circle cx="62" cy="68" r="1.2" />
+                    <circle cx="38" cy="30" r="1" />
+                </g>
+            </svg>
         </a>
     </header>
 
     <section class="hero">
         <h1>Massage Treatments</h1>
-        <p>Hand & Stone Massage and Facial spa
-With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial Spa makes luxury spa services - including massage, facial, and body slimming and toning
-- accessible to a broader clientele. After 20 years of consecutive growth, we have an average unit volume of $1.35 million and nearly 600,000 members and growing nationwide.</p>
+        <p>Hand & Stone Massage and Facial spa With 650+ locations across the U.S. and Canada, Hand & Stone Massage and
+            Facial Spa makes luxury spa services - including massage, facial, and body slimming and toning - accessible
+            to a broader clientele. After 20 years of consecutive growth, we have an average unit volume of $1.35
+            million and nearly 600,000 members and growing nationwide.</p>
         <p style="margin-top: 20px; color: #d4af37; font-weight: bold;">OPEN EVERYDAY: 24HOURS</p>
     </section>
 
-    <!-- Option 2: Luxury Image Gallery Slider Component -->
+    <!-- Luxury Image Gallery Slider Component -->
     <section class="gallery-section">
         <h2>Our Serene Space</h2>
         <div class="slider-wrapper">
@@ -660,7 +744,8 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
                     <div class="card-body">
                         <h2>Swedish massage </h2>
                         <span class="pricing">60 min $150 | 90 min $200 | 120 min $250</span>
-                        <p class="description">Swedish massage is a gentle, full-body therapeutic treatment designed to relax the entire body, improve circulation, </p>
+                        <p class="description">Swedish massage is a gentle, full-body therapeutic treatment designed to
+                            relax the entire body, improve circulation, </p>
                         <a class="book-btn" onclick="openBookingModal('Swedish massage')">Book now ›</a>
                     </div>
                 </article>
@@ -674,7 +759,8 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
                     <div class="card-body">
                         <h2>Deep tissue massage</h2>
                         <span class="pricing">60 min $150 | 90 min $200 | 120 min $250</span>
-                        <p class="description">Deep tissue massage is a targeted technique that uses slow, firm strokes to reach deeper layers of muscle and connective tissue.</p>
+                        <p class="description">Deep tissue massage is a targeted technique that uses slow, firm strokes
+                            to reach deeper layers of muscle and connective tissue.</p>
                         <a class="book-btn" onclick="openBookingModal('Deep tissue massage')">Book now ›</a>
                     </div>
                 </article>
@@ -688,7 +774,9 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
                     <div class="card-body">
                         <h2>Hot stone massage</h2>
                         <span class="pricing">60 min $150 | 90 min $200 | 120 min $250 </span>
-                        <p class="description">A hot stone massage is a therapeutic spa treatment that uses smooth, heated volcanic rocks (typically basalt) to deeply relax muscles, boost circulation, and ease tension. </p>
+                        <p class="description">A hot stone massage is a therapeutic spa treatment that uses smooth,
+                            heated volcanic rocks (typically basalt) to deeply relax muscles, boost circulation, and
+                            ease tension. </p>
                         <a class="book-btn" onclick="openBookingModal('Hot stone massage')">Book now ›</a>
                     </div>
                 </article>
@@ -715,7 +803,8 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
                     <div class="card-body">
                         <h2>Nuru massage</h2>
                         <span class="pricing">60 min $150 | 90 min $200 | 120 min $250</span>
-                        <p class="description">Nuru massage is a Japanese sensual, full-body massage where the therapist coats their body in a slippery, seaweed-based gel to glide directly over the client.</p>
+                        <p class="description">Nuru massage is a Japanese sensual, full-body massage where the therapist
+                            coats their body in a slippery, seaweed-based gel to glide directly over the client.</p>
                         <a class="book-btn" onclick="openBookingModal('Nuru massage')">Book now ›</a>
                     </div>
                 </article>
@@ -734,8 +823,6 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
                     </div>
                 </article>
             </div>
-
-            <!-- 6. Chair -->
         </div>
 
         <!-- Testimonial Slider -->
@@ -763,9 +850,7 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
 
     <button id="backToTop" onclick="scrollToTop()">↑</button>
 
-    <!-- ==========================================================================
-        NEW: APPOINTMENT BOOKING MODAL FORM
-        ========================================================================== */ -->
+    <!-- APPOINTMENT BOOKING MODAL FORM -->
     <div class="modal-overlay" id="bookingModal">
         <div class="modal-window">
             <button class="modal-close" onclick="closeBookingModal()">&times;</button>
@@ -789,32 +874,21 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
             <div class="booking-options-heading">Choose Booking Option</div>
 
             <div class="action-buttons-container">
-                <!-- Option 1: Direct Call Log Option -->
-                <a href="tel:+16155898561" class="action-btn btn-call">
-                    📞 Call
-                </a>
-
-                <!-- Option 2: Text Message Option -->
-                <button onclick="sendTextMessage()" class="action-btn btn-text">
-                    💬 Text Now
-                </button>
-
-                <!-- Option 3: WhatsApp Pre-filled Option -->
-                <button onclick="sendWhatsAppMessage()" class="action-btn btn-whatsapp">
-                    📱 WhatsApp
-                </button>
+                <a href="tel:+16155898561" class="action-btn btn-call">📞 Call</a>
+                <button onclick="sendTextMessage()" class="action-btn btn-text">💬 Text Now</button>
+                <button onclick="sendWhatsAppMessage()" class="action-btn btn-whatsapp">📱 WhatsApp</button>
             </div>
         </div>
     </div>
 
-    <!-- --- NEW SECTION: ADDITION 1 FOOTER --- -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">Hand & Stone Massage </div>
             <p>Providing premium holistic relaxation treatments and therapeutic wellness services.</p>
             <div class="footer-links">
-                <a href="#">Privacy Policy</a> | 
-                <a href="#">Terms of Service</a> | 
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a> |
                 <a href="tel:+16155898561">Contact Support</a>
             </div>
             <div class="footer-copyright">
@@ -825,8 +899,7 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
 
     <script>
         // Initialize EmailJS with Public Key
-        (function() {
-            // Replace 'YOUR_PUBLIC_KEY' with your unique key from your EmailJS account dashboard
+        (function () {
             emailjs.init("YOUR_PUBLIC_KEY");
         })();
 
@@ -866,7 +939,7 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
             answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
         }
 
-        window.onscroll = function() {
+        window.onscroll = function () {
             const btn = document.getElementById("backToTop");
             if (btn) {
                 btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
@@ -877,9 +950,6 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        /* ==========================================================================
-            BOOKING LOGIC & SLIDER JAVASCRIPT FUNCTIONS
-           ========================================================================== */
         let activeMassage = "";
 
         function openBookingModal(massageName) {
@@ -895,7 +965,6 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
             document.getElementById('appointmentZip').value = "";
         }
 
-        // OPTION 1: EmailJS Direct Form Delivery Logic
         function sendEmailBooking() {
             const name = document.getElementById('clientName').value.trim();
             const timeRaw = document.getElementById('appointmentTime').value;
@@ -915,18 +984,16 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
                 zipcode: zip
             };
 
-            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with IDs from your EmailJS account dashboard
             emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(function(response) {
+                .then(function (response) {
                     alert("Booking request sent successfully via email! We will confirm shortly.");
                     closeBookingModal();
-                }, function(error) {
+                }, function (error) {
                     alert("Email service delivery failed. Please use the WhatsApp or Call options below!");
                     console.log("EmailJS Error details:", error);
                 });
         }
 
-        // OPTION 2: Image Gallery Slider Logic
         let slideIndex = 0;
         function moveSlide(direction) {
             const slider = document.querySelector('.image-slider');
@@ -944,7 +1011,6 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
             slider.style.transform = `translateX(${-slideIndex * 100}%)`;
         }
 
-        // Auto-play gallery slide intervals every 5 seconds
         setInterval(() => {
             moveSlide(1);
         }, 5000);
@@ -983,13 +1049,12 @@ With 650+ locations across the U.S. and Canada, Hand & Stone Massage and Facial 
 
             const formattedTime = timeRaw.replace('T', ' at ');
             const message = `Hello, I'd like to book ${activeMassage} for ${name} on ${formattedTime}. Zipcode: ${zip}.`;
-            
+
             const encodedMessage = encodeURIComponent(message);
-            
-            // Checks user agent to apply correct native SMS formatting separator
+
             const isApple = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
             const smsSeparator = isApple ? '&' : '?';
-            
+
             const smsUrl = `sms:+16155898561${smsSeparator}body=${encodedMessage}`;
 
             window.location.href = smsUrl;
